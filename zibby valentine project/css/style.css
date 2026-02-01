@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    background: linear-gradient(135deg, pink, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 40px;         /* bigger padding on system */
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;          /* fixed width on system */
+    max-width: 90vw;       /* doesn’t overflow on small screens */
+}
+
+h1 {
+    color: crimson;
+    margin-bottom: 20px;
+    font-size: 50px;       /* large on system */
+}
+
+/* Buttons for system */
+button {
+    font-size: 18px;       /* big text on system */
+    padding: 10px 25px;    /* big buttons on system */
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#yes {
+    background: crimson;
+    color: white;
+}
+
+#no {
+    background: lightgray;
+}
+
+/* Responsive: Adjust buttons and text for phones */
+@media only screen and (max-width: 600px) {
+    .card {
+        padding: 5%;        /* smaller padding on phone */
+        width: 90%;         /* card fits phone width */
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 8vw;     /* font scales for small screens */
+        margin-bottom: 5vw;
+    }
+
+    button {
+        font-size: 5vw;     /* buttons shrink */
+        padding: 3vw 8vw;
+        margin: 2vw;
+    }
+}
